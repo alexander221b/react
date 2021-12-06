@@ -1,19 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App, { ClaseComponente, Contador } from './App';
+import App, { ClaseComponente, Contador, Formulario } from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App name="Diego">
+    {/*<App name="Diego">
       <p>Hijo</p>
     </App>
 
 
     <ClaseComponente  name="Juan" />
 
-    <Contador/>
+<Contador/>*/}
+
+    <Formulario/>
+   
+
+
   </React.StrictMode>,
   document.getElementById('root')
 );

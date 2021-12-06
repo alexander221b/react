@@ -3,7 +3,8 @@ import { Component } from 'react';
 
 function App(props) {
   return (
-    <div className="App">
+    <div class
+    Name="App">
       <p>Funcional: Hola, {props.name}</p>
       <p>{props.children}</p>
     </div>
@@ -45,6 +46,55 @@ export class Contador extends Component{
       </div>
     )
   }
+}
+
+
+export class Formulario extends Component{
+  
+  constructor (props){
+    super(props);
+    this.state = {
+      email : 'dasd@dasd.com',
+      password: 'adasd'
+    }
+  }
+
+  syncChanges(value, property){
+    let state = {};
+    state[property] = value;
+    this.setState(state);
+  }
+
+
+
+
+submitForm = () => {
+  console.log(this.state);
+}
+
+  render (){
+    return (
+      <form >
+        <input 
+          onChange = {(evento) => { this.syncChanges(evento.target.value, 'email') } }
+          type="email" 
+          value={this.state.email}  
+          placeholder="Email">
+        </input>
+        <input 
+          onChange = {(evento) => { this.syncChanges(evento.target.value, 'password') } }
+          type="password" 
+          value={this.state.password} 
+          placeholder="Pasword">        
+        </input>
+        <input 
+          onClick = {this.submitForm}
+          type="submit" 
+          value="Iniciar Sesión"></input>
+      </form>
+    )
+  }
+
 }
 
 export default App;
