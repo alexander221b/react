@@ -6,8 +6,12 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <ClaseComponente />
+    <App name="Diego">
+      <p>Hijo</p>
+    </App>
+
+
+    <ClaseComponente  name="Juan" />
   </React.StrictMode>,
   document.getElementById('root')
 );
