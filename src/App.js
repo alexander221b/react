@@ -22,4 +22,29 @@ export class ClaseComponente extends Component {
   }
 }
 
+export class Contador extends Component{
+  constructor (props){
+    super(props);
+    this.state = {
+       contador: 0
+    };
+  }
+
+  /* setState es usado para modificar el valor del estado contador*/
+  aumentar = () => { 
+    this.setState({
+      contador: this.state.contador + 1
+    })
+  };
+  
+  render(){
+    return (
+      <div className="App">
+        <p>{this.state.contador}</p>
+         <button onClick={this.aumentar}>Aumentar</button>
+      </div>
+    )
+  }
+}
+
 export default App;

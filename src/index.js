@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App, { ClaseComponente } from './App';
+import App, { ClaseComponente, Contador } from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -12,6 +12,8 @@ ReactDOM.render(
 
 
     <ClaseComponente  name="Juan" />
+
+    <Contador/>
   </React.StrictMode>,
   document.getElementById('root')
 );
